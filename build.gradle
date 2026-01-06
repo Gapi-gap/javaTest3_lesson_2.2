@@ -13,7 +13,9 @@ compileTestJava.options.encoding = "UTF-8"
 
 repositories {
     mavenCentral()
+    maven { url 'https://oss.sonatype.org/content/repositories/public/' }
 }
+
 
 dependencies {
     testImplementation 'io.rest-assured:rest-assured:5.5.0'
