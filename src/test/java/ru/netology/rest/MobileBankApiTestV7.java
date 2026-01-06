@@ -14,8 +14,8 @@ import org.junit.jupiter.api.Test;
 
 import static org.hamcrest.core.IsEqual.equalTo;
 import static io.restassured.RestAssured.given;
+
 public class MobileBankApiTestV7 {
-    private static final Log log = LogFactory.getLog(MobileBankApiTestV7.class);
 
     // Given - When - Then
 // Предусловия
@@ -23,6 +23,7 @@ public class MobileBankApiTestV7 {
     public void postRequestTest() {
         given()
                 .baseUri("https://postman-echo.com")
+                .contentType("text/plain; charset=UTF-8")
                 .body("some data")
                 .when()
                 .post("/post")
